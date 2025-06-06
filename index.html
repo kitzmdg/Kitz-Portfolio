@@ -13,13 +13,11 @@
 </head>
 
 <body>
-    <!-- ANIMATION AREA -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init(); </script>
-    <script src="script.js"></script>
+  
+    
     <!-- HEADER SECTION-->
     <header data-aos="fade-down" data-aos-easing="linear" data-aos-duration="750">
-        <a href="#home" target="_blank"><img src="assets/kmlogores.png" class="logo"></a>
+        <img src="assets/kmlogores.png" class="logo" onclick="refreshPage()">
 
         <div class='bx bx-menu' id="menu-icon"> </div>
 
@@ -41,7 +39,8 @@
         <div class="home-content" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="750">
             <h3>Hi, I'm</h3>
             <h1>Kitz Mavin</h1>
-            <h3>I'm a <span class="multiple-text">Video Editor</span></h3>
+            <h3>I'm a <span class="multiple-text"></span></h3> 
+            <!-- NOT WORKING, TROUBLE SHOOT TEXT TYPE TOMM -->
 
             <p>I'm a freelance video editor and beginner programmer with basic knowledge of front-end developing and
                 Java. Currently Taking Bachelor of Information and Technology (BSIT) Course in STI College Alabang.</p>
@@ -82,14 +81,14 @@
                 <h2 class="heading">About <span>Me</span></h2>
                 <h3>I'm a <span>Video Editor</span></h3>
                 <p>
-                    I am an IT Student pursuing my passion as a video editor. Other than that, I also do basic
+                    I am also an IT Student pursuing my passion as a video editor. Other than that, I also do basic
                     programming.
                     Particularly HTML, CSS, and Java.
                 </p>
             </div>
-        
 
-            <div class="about-skills" >
+
+            <div class="about-skills">
                 <div class="about-skill">
                     <p>Video Editing</p>
                     <div class="skill-bar">
@@ -131,7 +130,174 @@
     </section>
 
 
+    <!-- PORTFOLIO CODE -->
 
+    <section class="portfolio" id="portfolio"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+
+        <h2 class="port-heading">My
+            <span>Portfolio</span>
+        </h2>
+
+        <div class="portfolio-content" >
+
+            <div class="row" >
+                <a href="https://drive.google.com/file/d/1zeUdAAigrqJLgPh7bCh7zQTQq64zavBV/view?usp=sharing"
+                    target="_blank"><img src="assets/Glitch.png" alt=""></a>
+                <div class="main-row" >
+                    <div class="row-text">
+
+                        <h5>"GLITCH"</h5>
+
+                    </div>
+                    <div class="row-icon">
+                        <i class='bx bxs-camera-movie'></i>
+                    </div>
+                </div>
+                <h4>Independent Short Film</h4>
+            </div>
+
+
+            <div class="row">
+                <a href="https://drive.google.com/file/d/1caRMjAa-Tttcvzgst6AfklFgoaiAMJ7H/view?usp=sharing"
+                    target="_blank"><img src="assets/Kinaiya.png" alt=""></a>
+                <div class="main-row">
+                    <div class="row-text">
+
+                        <h5> "RIPPLE" </h5>
+
+                    </div>
+                    <div class="row-icon">
+                        <i class='bx bxs-camera-movie'></i>
+                    </div>
+                </div>
+                <h4>STICA Director's Cut 3rd Runner Up</h4>
+            </div>
+
+
+            <div class="row">
+
+                <a href="https://drive.google.com/file/d/1glld3Q0EXrcfoa72yvUaL3IkdqTOOjml/view?usp=sharing"
+                    target="_blank"><img src="assets/Sino.png" alt=""></a>
+                <div class="main-row">
+                    <div class="row-text">
+
+                        <h5>"SINO"</h5>
+
+                    </div>
+                    <div class="row-icon">
+                        <i class='bx bxs-camera-movie'></i>
+                    </div>
+                </div>
+                <h4>STICA Director's Cut 1st Runner Up</h4>
+            </div>
+
+
+            <div class="row">
+                <a href="https://drive.google.com/file/d/1zeUdAAigrqJLgPh7bCh7zQTQq64zavBV/view?usp=sharing"
+                    target="_blank"><img src="assets/Income Inequality.png" alt=""></a>
+                <div class="main-row">
+                    <div class="row-text">
+
+                        <h5>"Income Inequality"</h5>
+
+                    </div>
+                    <div class="row-icon">
+                        <i class='bx bxs-camera-movie'></i>
+                    </div>
+                </div>
+                <h4>Commission Film</h4>
+            </div>
+
+
+        </div>
+        <a href="https://drive.google.com/drive/folders/1x6-sZyES-qQe5XlY8sQHd9-GeXeCgcSC?usp=sharing"
+            class="portfolio-btn" target="_blank"> View Full Portfolio</a>
+
+    </section>
+
+    <!-- CERTIFICATES CODE -->
+
+    <section class="certificates" id="certificate" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+
+        <h2 class="port-heading">My
+            <span>Certificates</span>
+        </h2>
+
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide1" src="assets/cert1.png" alt="Certificate 1">
+                <img id="slide2" src="assets/cert2.png" alt="Certificate 2">
+                <img id="slide3" src="assets/cert3.png" alt="Certificate 3">
+                <img id="slide4" src="assets/cert4.png" alt="Certificate 4">
+                <img id="slide5" src="assets/cert5.png" alt="Certificate 5">
+                <img id="slide6" src="assets/cert6.png" alt="Certificate 6">
+            </div>
+
+            <div class="slider-nav">
+                <a href="#slide1"></a>
+                <a href="#slide2"></a>
+                <a href="#slide3"></a>
+                <a href="#slide4"></a>
+                <a href="#slide5"></a>
+                <a href="#slide6"></a>
+            </div>
+        </div>
+        <!-- MODAL TRIAL HTML -->
+        <div id="imageModal" class="modal">
+            <span class="modal-close">&times;</span>
+
+            <button class="modal-arrow left-arrow" aria-label="Previous Image">&#10094;</button>
+            <button class="modal-arrow right-arrow" aria-label="Next Image">&#10095;</button>
+
+            <img class="modal-content" id="modalImage" alt="Expanded Certificate">
+        </div>
+
+    </section>
+
+    <!-- CONTACT CODE -->
+    <section class="contact" id="contact" data-aos="zoom-in-down" data-aos-easing="linear" data-aos-duration="750">
+
+        <h2 class="heading-contact">Contact <span>Me</span></h2>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="b0897ee3-18cf-4ec8-8d31-5234eb2f6dcc">
+            <div class="input-box">
+                <input type="text" name="Name" placeholder="Full Name">
+                <input type="email" name="Email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" name="Phone No." placeholder="Phone Number">
+                <input type="text" name="Subject" placeholder="Email Subject">
+            </div>
+
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- FOOTER CODE AYOKO NA PLS -->
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/kitz-mavin-gulfan-196a67357/" target="_blank"><i
+                    class='bx bxl-linkedin'></i></a>
+            <a href="https://www.instagram.com/_ma.vinndiagram/" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.facebook.com/kitzmdg/" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://github.com/kitzmdg" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+        <p class="copyright">
+            &copy;Kitz Mavin | All Rights Reserved
+        </p>
+    </footer>
+
+
+      <!-- ANIMATION AREA -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    
 </body>
 
 </html>

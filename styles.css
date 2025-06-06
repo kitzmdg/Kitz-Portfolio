@@ -46,9 +46,11 @@ header {
     justify-content: space-between;
     padding: 2rem 9%;
     background: transparent;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
+    opacity: 0;
     transition: all 0.3s ease;
 }
+
 
 .logo {
     font-size: 3rem;
@@ -133,7 +135,7 @@ span {
     font-size: 7.8rem;
     font-weight: 700;
     line-height: 1.3;
-    background: -webkit-linear-gradient(#254e79, #4bb3e2);
+    background: #4bb3e2;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -328,5 +330,463 @@ span {
     width: 0;
     background: linear-gradient(264deg, #00c3ff -5.09%, #94dfff 106.28%);
     border-radius: 50px;
-    transition: width 2s ease-in-out;
+    transition: width 2.3s ease-in-out;
+}
+
+/* PORTFOLIO CSS */
+
+
+.portfolio {
+    background: var(--second-bg-color);
+    text-align: center;
+}
+
+.port-heading {
+    padding-top: 5.5rem;
+    text-align: center;
+    font-size: 6rem;
+}
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    align-items: center;
+    gap: 2.3rem;
+    margin-top: 4.2rem;
+    margin-bottom: 5rem;
+}
+
+.row {
+    background: var(--bg-color);
+    border-radius: 28px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.row img {
+    height: auto;
+    width: 100%;
+    border-radius: 28px;
+    margin-bottom: 1.4rem;
+}
+
+.main-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.row h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.row i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    font-size: 27px;
+    border-radius: 50%;
+    color: var(--text-color);
+}
+
+.row h4 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.row:hover {
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px) scale(1.03);
+    cursor: pointer;
+}
+
+.portfolio-btn {
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    background: var(--main-color);
+    border-radius: 5rem;
+    box-shadow: none;
+    font-size: 2rem;
+    color: var(--bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+    margin: 0 auto;
+}
+
+.portfolio-btn:hover {
+    transform: scale(1.2) translateY(-8px);
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+/* CERTIFICATES SLIDER CSS */
+
+.certificates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background: var(--bg-color);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+.slider-wrapper {
+    position: relative;
+    width: 80vw;
+    max-width: 960px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.slider-nav {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity 0.25s ease;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+/* MODAL CODE */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    /* Animation */
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1001;
+}
+
+.modal-close:hover {
+    color: #bbb;
+}
+
+/* Arrows */
+.modal-arrow {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 0 15px;
+    border-radius: 5px;
+    user-select: none;
+    transform: translateY(-50%);
+    transition: background 0.2s ease;
+    z-index: 1001;
+}
+
+.modal-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+.modal-content {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.modal-content.fade-out {
+    opacity: 0;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 80vh;
+}
+
+.modal-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.modal-content img.fade-out {
+    opacity: 0;
+}
+
+/* CONTACT CSS */
+.heading-contact {
+    padding-top: 5.5rem;
+    text-align: center;
+    font-size: 6rem;
+}
+
+/* CONTACT CSS */
+
+.contact{
+    background: var(--second-bg-color);
+}
+.contact h2{
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+.contact form{
+    min-width: 90rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form.input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background:var(--bg-color);
+    border-radius: 0.8rem;
+    border: 1px solid var(--main-color);
+    margin: 0.7rem 0;
+    resize: none;
+}
+
+.contact form .input-box input{
+    width: 49%;
+    margin: 0.7rem 0.35rem;
+}
+.contact form.btn{
+    margin-top: 2rem;
+}
+
+/* Footercss */
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background: var(--bg-color);
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--main-color);
+}
+.footer .social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color) ;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+}
+.footer .social a:hover{
+    transform: scale(1.2) translateY(-8px);
+    background: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 20px var(--main-color);
+
+}
+.footer .copyright{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Responsive Design Code */
+@media (max-width: 1285px){
+    html{
+        font-size:55% ;
+    }
+}
+
+
+@media (max-width: 991px){
+    header{
+        padding:2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 786px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 255px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0);
+        transition: all 0.3s ease;
+        backdrop-filter: blur(3px);
+    }
+    .navbar a{
+        display: block;
+        padding: 17px;
+        font-size: 22px;
+    }
+    .navbar.active{
+        right: 0;
+        background: transparent;
+        backdrop-filter: blur(5px);
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size:2.6rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-content{
+        order: 2;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+
+@media (max-width: 617px) {
+    .home-img img{
+        width: 80vw;
+        margin-top: 8rem;
+    }
+    .about-img img{
+        width: 80vw;
+        margin-top: 4rem;
+    }
+}
+@media (max-width: 426px){
+    .heading{
+        font-size:5rem ;
+        text-align: center;
+        margin: 2rem 0;
+    }
 }
